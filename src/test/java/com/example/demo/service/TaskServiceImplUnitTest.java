@@ -104,7 +104,7 @@ class TaskServiceImplUnitTest {
         task.setTypeId(1);
         task.setTitle("JUnit");
         task.setDeadline(LocalDateTime.now());
-        Optional<Task> taskOpt = Optional.ofNullable(task);
+        Optional<Task> taskOpt = Optional.of(task);
         // モッククラスのI/Oをセット
         when(dao.findById(1)).thenReturn(taskOpt);
         // サービスを実行
